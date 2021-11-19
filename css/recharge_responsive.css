@@ -1,0 +1,15 @@
+.re_item{
+    flex-direction: column;
+    /* background-color: red; */
+    /* width:100%;
+    height: 100%; */
+    background: red;
+}
+
+body{
+    background-color: red;
+}
+
+#re-form{
+    background-color: red;
+}

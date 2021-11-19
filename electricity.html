@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/ele_style.css" />
+  <script src="./javascript/electricity.js"></script>
+  <title>Electricity</title>
+</head>
+
+<body>
+  <!--Header-->
+  <header>
+    <div id="logo">Online <a class="logo-s">Recharge</a></div>
+    <span class="sign"><a href="#" class="act" onclick="document.getElementById('id01').style.display='block'">SIGN
+        UP</a></span>
+    <span class="sign"><a href="#" class="act" onclick="document.getElementById('id01').style.display='block'">SIGN
+        IN</a></span>
+  </header>
+  <!--/Header-->
+
+  <!--Login-->
+  <div id="id01" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="./image/user.jpg" alt="Avatar" class="avatar" />
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" class="inputcred" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" class="inputcred" required />
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>
+      </div>
+
+      <div class="container">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
+          Cancel
+        </button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("id01");
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+  <!--//Login-->
+
+  <div class="ele-item">
+    <div class="e-form">
+      <p>Electricity Bill Payment</p>
+      <form action="" id="ele-form">
+        <div class="container">
+
+          <div class="f-group">
+            <label for="">Select State</label>
+            <select name="slct1" id="slct1" onchange="populate(this.id,'slct2')">
+              <option>Select State</option>
+              <option value="ap">Andhra Pradesh</option>
+              <option value="aru">Arunachal</option>
+              <option value="assam">Assam</option>
+              <option value="bihar">Bihar</option>
+              <option value="chandi">Chandigarh</option>
+              <option value="chatti">Chhattigarrh</option>
+              <option value="dan">Dadra and Nagar Haveli</option>
+              <option value="dad">Daman and Diu</option>
+              <option value="goa">Goa</option>
+              <option value="gujrat">Gujrat</option>
+              <option value="haryana">Haryana</option>
+              <option value="hp">Himachal Pradesh</option>
+              <option value="jk">Jammu and Kashmir</option>
+              <option value="jhar">Jharkhand</option>
+              <option value="kar">Karnataka</option>
+              <option value="kera">Kerala</option>
+              <option value="laks">Lakshadweep</option>
+              <option value="mp">Madhya Pradesh</option>
+              <option value="mah">Maharashtra</option>
+              <option value="man">Manipur</option>
+              <option value="meg">Meghalaya</option>
+              <option value="miz">Mizoram</option>
+              <option value="nag">Nagaland</option>
+              <option value="delhi">New Delhi</option>
+              <option value="odisha">Odisha</option>
+              <option value="pond">Pondicherry</option>
+              <option value="punjab">Punjab</option>
+              <option value="raj">Rajasthan</option>
+              <option value="sikkim">Sikkim</option>
+              <option value="tn">Tamil Nadu</option>
+              <option value="tel">Telangana</option>
+              <option value="tri">Tripura</option>
+              <option value="up">Uttar Pradesh</option>
+              <option value="ut">Uttarakhand</option>
+              <option value="wb">West Bengal</option>
+            </select>
+          </div>
+
+          <div class="f-group">
+            <label for="">Select Board</label>
+            <select name="slct2" id="slct2"></select>
+          </div>
+           
+          <div class="f-group">
+          <label for="mobile" class="mobile-no">Mobile No/Customer Id</label>
+          <input type="number" maxlength="10" minlength="10" autocomplete="off" placeholder="Mobile Number/Customer Id"
+            name="mobile" id="mobile-no" required="" value="" required/>
+          </div>
+
+          <div class="f-group">
+          <label for="amount" class="amount">Amount</label>
+          <input type="number" autocomplete="off" name="amount" id="amount" placeholder="Amount"  required/>
+         </div>
+
+          <button type="button" class="btn1">Proceed to Recharge</button>
+        </div>
+      </form>
+    </div>
+    
+  </div>
+</body>
+
+</html>

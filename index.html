@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/slider.css" />
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet " media="screen and (max-width:1250px)" href="./css/style_responsive.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c7f4ed34f1.js" crossorigin="anonymous"></script><!--Font awesonme-->
+  <title>Online Recharge</title>
+</head>
+<body>
+  <header>
+    <div id="logo">Online <a class="logo-s">Recharge</a></div>
+    
+    <span class="sign"><a href="#" class="act" onclick="document.getElementById('id02').style.display='block'">SIGN
+        UP</a></span>
+    <span class="sign"><a href="#" class="act" onclick="document.getElementById('id01').style.display='block'">SIGN
+        IN</a></span>
+    
+  </header>
+
+  <!--Login-->
+ <div id="id01" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="./image/user.jpg" alt="Avatar" class="avatar" />
+      </div>
+
+      <div class="container">
+        <label for ="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" class="inputcred" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw"  class="inputcred" required />
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>
+      </div>
+
+      <div class="container">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
+          Cancel
+        </button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+  <!--//Login-->
+
+
+  <!--SIgn up-->
+
+  <div id="id02" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="./image/user.jpg" alt="Avatar" class="avatar" />
+      </div>
+
+      <div class="container">
+        <label for ="uname"><b>Enter Your Name</b></label>
+        <input type="text" placeholder="Enter Your Name" name="uname" class="inputcred" required />
+        
+        <label for ="uname"><b>Enter Your Mobile No</b></label>
+        <input type="text" placeholder="Enter Your Mobile No" name="uname" class="inputcred" required />
+
+        <label for ="uname"><b>Enter Your Email Id</b></label>
+        <input type="text" placeholder="Enter Your Email Id" name="uname" class="inputcred" required />
+
+        <label for ="uname"><b>Enter Password</b></label>
+        <input type="text" placeholder="Enter Password" name="uname" class="inputcred" required />
+
+
+        <label for="psw"><b>Confirm Password</b></label>
+        <input type="password" placeholder="Confirm Password" name="psw"  class="inputcred" required />
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>
+      </div>
+
+      <div class="container">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">
+          Cancel
+        </button>
+        <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+      </div>
+    </form>
+  </div>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id02');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+
+
+
+  <!---//Sign up-->
+  <!--Slider-->
+  <div class="slider">
+    <div class="myslider fade" style="display: block">
+      <div class="txt">
+        <p>
+          Get a coupon voucher on Mobile Recharge</p>
+      </div>
+      <img src="./image/banner1.jpg" style="width: 100%; height: 100% ;opacity: 0.7;" />
+    </div>
+    <div class="myslider fade">
+      <div class="txt">
+        <p>50% off on train ticket</p>
+      </div>
+      <img src="./image/banner2.jpg" style="width: 100%; height: 100%" />
+    </div>
+    <div class="myslider fade">
+      <div class="txt">
+        <p>Get Upto RS.125 off on Bus ticket</p>
+      </div>
+      <img src="./image/banner3.jpg" style="width: 100%; height: 100%" />
+    </div>
+    <div class="myslider fade">
+      <div class="txt">
+        <p>
+          Flat RS.100 Cash Back on Movie Ticket</p>
+      </div>
+      <img src="./image/banner4.jpg" style="width: 100%; height: 100%" />
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095; </a>
+
+    <div class="dotsbox" style="text-align: center">
+      <sapn class="dot" onclick="currentSlider(1)"></sapn>
+      <sapn class="dot" onclick="currentSlider(2)"></sapn>
+      <sapn class="dot" onclick="currentSlider(3)"></sapn>
+      <sapn class="dot" onclick="currentSlider(4)"></sapn>
+    </div>
+  </div>
+  <script src="./javascript/slider.js"></script><!--Slider javascript-->
+  <!--//Slider-->
+
+<!--Services-->
+  <section id="serivices-container">
+    <h1 class="h-primary center">Recharge &#38; Pay Bills</h1>
+    <div id="services">
+       
+         <div class="box">
+            <a href="recharge.html">
+            <img src="./image/phone.png" alt="" srcset="">
+            <h2 class="h-secondary center">Recharge PrePaid Mobile</h2>
+            </a>
+            </div>
+        
+        <div class="box">
+          <a href="electricity.html">
+            <img src="./image/electricity.png" alt="" srcset="">
+            <h2 class="h-secondary center">Pay Electricity Bill</h2>
+           </a>
+        </div>
+
+        <div class="box">
+          <a href="dth.html">
+            <img src="./image/dth.png" alt="" srcset="">
+            <h2 class="h-secondary center">Recharge DTH Connection</h2>
+           </a>
+        </div>
+
+        <div class="box">
+          <a href="gas.html">
+          <img src="./image/gas.png" alt="" srcset="">
+          <h2 class="h-secondary center">Book Gas Cylinder</h2>
+        </a>
+      </div>
+    </div>
+</section>
+<section id="serivices-container">
+  <h1 class="h-primary center">Book &#38; Buy</h1>
+  <div id="services">
+
+      <div class="box">
+          <a href="flight.html">
+          <img src="./image/flight.png" alt="" srcset="">
+          <h2 class="h-secondary center">Flight Tickets</h2>
+        </a>
+      </div>
+
+      <div class="box">
+           <a href="Movie.html">
+          <img src="./image/movie.png" alt="" srcset="">
+          <h2 class="h-secondary center">Movie Tickets</h2>
+          </a>
+      </div>
+
+      <div class="box">
+        <a href="bus.html">
+          <img src="./image/bus.png" alt="" srcset="">
+          <h2 class="h-secondary center">Bus Tickets</h2>
+        </a>
+      </div>
+      
+      <div class="box">
+        <a href="train.html">
+        <img src="./image/train.png" alt="" srcset="">
+        <h2 class="h-secondary center">Train Tickets</h2>
+        </a>
+    </div>
+  </div>
+</section>
+<!--//Services-->
+
+<!--About-->
+<section id="about-website">
+    <img src="./image/systempic.PNG" alt="" srcset="" >
+    <div id="about">
+      <p class="mtext" >The Fastest Way to Pay In-store  &#38; Online</p>
+      <p class="ntext">Load up your Paytm Wallet for free and make payments in a jiffy at over 21 million stores, websites and apps.</p>
+      <p class="m1text">Recharge</p>
+      <p class="ntext">Recharge your Mobile,DTH,Datacard etc..</p>
+      <p class="m1text">Paybills</p>
+      <p class="ntext">Pay your Bills(Electricity,Gas,DTH etc..)</p>
+      <p class="m1text">Book Online</p>
+      <p class="ntext">Book Online Tickets(Movie,Bus,Train etc..)</p>
+    </div>
+    <button id="download">
+      <span>Download the App</span>
+      <i class="fab fa-apple"></i>
+      <i class="fab fa-google-play"></i>
+    </button>
+ </section>
+ <!--/About-->
+<!--Footer-->
+ 
+<footer>
+   <div class="footer-section">
+     <div class="footer-top">
+       <div class="column">
+         <h4>Company</h4>
+         <ul class="item-list">
+           <li><a href="#">About Us</a></li>
+           <li><a href="#">Support</a></li>
+           <li><a href="#">Term & Conditions</a></li>
+           <li><a href="#">Feedback</a></li>
+           <li><a href="#">Contact</a></li>
+         </ul>
+       </div>
+       <div class="column">
+        <h4>Mobile Recharg</h4>
+        <ul class="item-list">
+          <li><a href="#">Airtel</a></li>
+          <li><a href="#">VI</a></li>
+          <li><a href="#">Jio</a></li>
+          <li><a href="#">BSNL</a></li>
+          <li><a href="#">MTNL</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>DTH Recharges</h4>
+        <ul class="item-list">
+          <li><a href="#">Airtel Digital TV</a></li>
+          <li><a href="#">Dish TV</a></li>
+          <li><a href="#">Sun Direct</a></li>
+          <li><a href="#">Tata Sky</a></li>
+          <li><a href="#">d2h</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Book a Cylinder</h4>
+        <ul class="item-list">
+          <li><a href="#">Bharat gas </a></li>
+          <li><a href="#">HP Gas</a></li>
+          <li><a href="#">Indane</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Payment options</h4>
+        <ul class="item-list">
+         <li>Credit Cards</li>
+         <li>Debit Cards</li>
+         <li>Cash on Delivery</li>
+         <li>Direct Bank Debits</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="social-icon">
+        <p>Join us</p>
+        <span>
+          <i class="fab fa-facebook-f fa-lg facebook"></i>
+          <i class="fab fa-twitter fa-lg twitter"></i>
+          <i class="fab fa-google-plus-g fa-lg google"></i>
+          <i class="fab fa-instagram fa-lg instagram"></i>
+        </span>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; 2021 Online Recharge website | Design by BTech(CSE) 3rd year student Subhash Kumar
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+
+</html>

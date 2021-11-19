@@ -1,0 +1,59 @@
+#services
+{
+flex-direction: column;
+}
+header #logo{
+    width:80%;
+    text-align: center;
+    float:center;
+}
+
+header .sign {
+    width: 30%;
+    float: center;
+}
+
+/* header .sign-main{
+    width:100%;
+} */
+
+
+
+#services .box
+{
+    padding:14px;
+    margin:2px 0px;
+    border-radius: 28px;
+    background-color: rgb(240, 211, 211);
+    margin-bottom: 20px;
+    width:100%;
+
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+
+#services .box:hover{
+    transform:scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+#about-website{
+    flex-direction: column;
+    background: #3498db;
+    /* height: 600px; */
+    padding: 50px;
+}
+
+#about-website img{
+    margin: auto;
+}
+
+
+#download:hover{
+    background-color:#3498db ;
+}
+
+.footer-top{
+    flex-direction: column;
+}

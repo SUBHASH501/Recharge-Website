@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/rec_style.css" />
+  <link rel="stylesheet " media="screen and (max-width:950px)" href="./css/recharge_responsive.css" />
+  <script src="https://kit.fontawesome.com/c7f4ed34f1.js" crossorigin="anonymous"></script><!--Font awesonme-->
+  <script src="./javascript/recharge.js"></script>
+  
+
+  <title>Recharge</title>
+</head>
+
+<body>
+
+  <!--Header-->
+  <header>
+    <div id="logo">Online <a class="logo-s">Recharge</a></div>
+    <span class="sign"><a href="#" class="act" onclick="document.getElementById('id01').style.display='block'">SIGN
+        UP</a></span>
+    <span class="sign"><a href="#" class="act" onclick="document.getElementById('id01').style.display='block'">SIGN
+        IN</a></span>
+  </header>
+  <!--/Header-->
+
+
+  <!--Login-->
+  <div id="id01" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="./image/user.jpg" alt="Avatar" class="avatar" />
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" class="inputcred" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" class="inputcred" required />
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>
+      </div>
+
+      <div class="container">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
+          Cancel
+        </button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+  <!--//Login-->
+
+  <div class="re_item">
+
+    <div class="left">
+      <form action="" id="re-form">
+        <h2>Mobile Recharge or Bill Payment</h2>
+        <div class="radiobutton">
+          <input type="radio" checked="checked" id="radio0" name="serviceType" value="prepaid">
+          <label for="radio0">PrePaid</label>
+          <input type="radio" id="radio1" name="serviceType" value="postpaid">
+          <label for="radio1">Postpaid</label>
+        </div>
+        <div class="user_info">
+          <ul>
+            <li>
+              <i class="fas fa-mobile-alt"></i>
+              <input type="tel" maxlength="10" autocomplete="new-password" placeholder="Mobile Number" required="" value="" />
+              <label>Mobile Number</label>
+            </li>
+
+            <li>
+              <i class="far fa-building"></i>
+              <select name="operator" id="operator">
+                <option value="jio">Jio</option>
+                <option value="airtel">Airtel</option>
+                <option value="vi">VI</option>
+                <option value="bsnl">BSNL</option>
+                <option value="mtnl">MTNL</option>
+              </select>
+              <label for="operator">Operator</label>
+            </li>
+
+            <li>
+              <i class="fas fa-rupee-sign"></i>
+              <input type="tel" required="" placeholder="Enter Amount" id="amount" autocomplete="false" maxlength="30"
+                value="">
+              <label>Amount</label>
+            </li>
+
+
+            <button type="button" class="btn1">Proceed to Recharge</button>
+          </ul>
+        </div>
+      </form>
+    </div>
+
+
+
+    
+    <div class="right">
+      <h2>Select an Operator to see Plans</h2>
+      <div class="company">
+
+        <div class="box">
+          <a href="#" onclick=airtel()>
+            <img src="./image/airtel.jpg" style="border-radius: 50px;">
+            <p>Airtel Recharge</p>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="#" onclick=jio()>
+            <img src="./image/jio.jpg" style="border-radius: 50px;">
+            <p>Jio Recharge</p>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="#" onclick=bsnl()>
+          <img src="./image/bsnl.jpg" style="border-radius: 50px;">
+          <p>BSNL Recharge</p>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="#" onclick="vi()">
+          <img src="./image/vi.jpg" style="border-radius: 50px;">
+          <p>Vi Recharge</p>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="#" onclick="mtnl()">
+          <img src="./image/mtnl.jpg" style="border-radius: 50px;">
+          <p>MTNL Recharge</p>
+          </a>
+        </div>
+      </div>
+
+    <!--Airtel plans-->
+      <div id="airtel">
+        <div id="plans">
+           <h1 style="text-align: center; padding-top: 10px;">Airtel Plan</h1>
+          <div class="pcategory">
+            <table>
+              <tr>
+                <th>Popular</th>
+                <th>Special Recharge</th>
+                <th>Top Up</th>
+                <th>2G/3G/4G Data</th>
+                <th>Full Talktime</th>
+                <th>Roaming</th>
+              </tr>
+            </table>
+            <div class="mainplan">
+              <div class="each-plan">
+                <span class="money" id="money1" onclick="moneycopy(getElementById('money1').id)">Rs. 149</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD & Roaming calls on any network 2GB Data and 300 SMS. Pack valid for 28
+                  days.
+                </span>
+                <span class="description">
+                  Validity:28days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money2" onclick="moneycopy(getElementById('money2').id)">Rs. 249</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD calls on any network 1.5GB/day + FREE 500MB/day and 100 SMS/day. Pack
+                  valid for 28 days.
+                </span>
+                <span class="description">
+                  Validity:28days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money3" onclick="moneycopy(getElementById('money3').id)">Rs. 399</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD & Roaming calls on any network daily 1.5GB data and 100 SMS. Pack
+                  valid for 56 days
+                </span>
+                <span class="description">
+                  Validity:56days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money4" onclick="moneycopy(getElementById('money4').id)">Rs. 48</span>
+                <span class="description">
+                  Enjoy 3GB data valid till your current pack validity
+                </span>
+                <span class="description">
+                  Validity:NA
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money5" onclick="moneycopy(getElementById('money5').id)">Rs. 98</span>
+                <span class="description">
+                  Enjoy 12GB data valid till your current pack validity
+                </span>
+                <span class="description">
+                  Validity:NA
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ <!--/Airtel plan-->
+
+ <!--Jio plan-->
+      <div id="jio">
+        <div id="plans">
+          <h1 style="text-align: center; padding-top: 10px;">jio Plan</h1>
+          <div class="pcategory">
+            <table>
+              <tr>
+                <th>Popular</th>
+                <th>Special Recharge</th>
+                <th>Top Up</th>
+                <th>2G/3G/4G Data</th>
+                <th>Full Talktime</th>
+                <th>Roaming</th>
+              </tr>
+            </table>
+            <div class="mainplan">
+              <div class="each-plan">
+                <span class="money" id="money6" onclick="moneycopy(getElementById('money6').id)">Rs. 149</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD & Roaming calls on any network 2GB Data and 300 SMS. Pack valid for 28
+                  days.
+                </span>
+                <span class="description">
+                  Validity:28days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money7" onclick="moneycopy(getElementById('money7').id)">Rs. 249</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD calls on any network 1.5GB/day + FREE 500MB/day and 100 SMS/day. Pack
+                  valid for 28 days.
+                </span>
+                <span class="description">
+                  Validity:28days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money8" onclick="moneycopy(getElementById('money8').id)">Rs. 399</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD & Roaming calls on any network daily 1.5GB data and 100 SMS. Pack
+                  valid for 56 days
+                </span>
+                <span class="description">
+                  Validity:56days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money9" onclick="moneycopy(getElementById('money9').id)">Rs. 48</span>
+                <span class="description">
+                  Enjoy 3GB data valid till your current pack validity
+                </span>
+                <span class="description">
+                  Validity:NA
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money10" onclick="moneycopy(getElementById('money10').id)">Rs. 98</span>
+                <span class="description">
+                  Enjoy 12GB data valid till your current pack validity
+                </span>
+                <span class="description">
+                  Validity:NA
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--Jio Plan-->
+
+ <!-- BSNL plan-->
+      <div id="bsnl">
+        <div id="plans">
+          <h1 style="text-align: center; padding-top: 10px;">BSNL Plan</h1>
+          <div class="pcategory">
+            <table>
+              <tr>
+                <th>Popular</th>
+                <th>Special Recharge</th>
+                <th>Top Up</th>
+                <th>2G/3G/4G Data</th>
+                <th>Full Talktime</th>
+                <th>Roaming</th>
+              </tr>
+            </table>
+            <div class="mainplan">
+              <div class="each-plan">
+                <span class="money" id="money11" onclick="moneycopy(getElementById('money11').id)">Rs. 149</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD & Roaming calls on any network 2GB Data and 300 SMS. Pack valid for 28
+                  days.
+                </span>
+                <span class="description">
+                  Validity:28days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money12" onclick="moneycopy(getElementById('money12').id)">Rs. 249</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD calls on any network 1.5GB/day + FREE 500MB/day and 100 SMS/day. Pack
+                  valid for 28 days.
+                </span>
+                <span class="description">
+                  Validity:28days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money13" onclick="moneycopy(getElementById('money13').id)">Rs. 399</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD & Roaming calls on any network daily 1.5GB data and 100 SMS. Pack
+                  valid for 56 days
+                </span>
+                <span class="description">
+                  Validity:56days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money14" onclick="moneycopy(getElementById('money14').id)">Rs. 48</span>
+                <span class="description">
+                  Enjoy 3GB data valid till your current pack validity
+                </span>
+                <span class="description">
+                  Validity:NA
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money15" onclick="moneycopy(getElementById('money15').id)">Rs. 98</span>
+                <span class="description">
+                  Enjoy 12GB data valid till your current pack validity
+                </span>
+                <span class="description">
+                  Validity:NA
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--BSNL Plan-->
+
+ <!-- VI plan-->
+      <div id="vi">
+        <div id="plans">
+          <h1 style="text-align: center; padding-top: 10px;">VI Plan</h1>
+          <div class="pcategory">
+            <table>
+              <tr>
+                <th>Popular</th>
+                <th>Special Recharge</th>
+                <th>Top Up</th>
+                <th>2G/3G/4G Data</th>
+                <th>Full Talktime</th>
+                <th>Roaming</th>
+              </tr>
+            </table>
+            <div class="mainplan">
+              <div class="each-plan">
+                <span class="money" id="money16" onclick="moneycopy(getElementById('money16').id)">Rs. 149</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD & Roaming calls on any network 2GB Data and 300 SMS. Pack valid for 28
+                  days.
+                </span>
+                <span class="description">
+                  Validity:28days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money17" onclick="moneycopy(getElementById('money17').id)">Rs. 249</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD calls on any network 1.5GB/day + FREE 500MB/day and 100 SMS/day. Pack
+                  valid for 28 days.
+                </span>
+                <span class="description">
+                  Validity:28days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money18" onclick="moneycopy(getElementById('money18').id)">Rs. 399</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD & Roaming calls on any network daily 1.5GB data and 100 SMS. Pack
+                  valid for 56 days
+                </span>
+                <span class="description">
+                  Validity:56days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money19" onclick="moneycopy(getElementById('money19').id)">Rs. 48</span>
+                <span class="description">
+                  Enjoy 3GB data valid till your current pack validity
+                </span>
+                <span class="description">
+                  Validity:NA
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money20" onclick="moneycopy(getElementById('money20').id)">Rs. 98</span>
+                <span class="description">
+                  Enjoy 12GB data valid till your current pack validity
+                </span>
+                <span class="description">
+                  Validity:NA
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--/VI Plan-->
+
+ <!-- MTNL plan-->
+      <div id="mtnl">
+        <div id="plans">
+          <h1 style="text-align: center; padding-top: 10px;">MTNL Plan</h1>
+          <div class="pcategory">
+            <table>
+              <tr>
+                <th>Popular</th>
+                <th>Special Recharge</th>
+                <th>Top Up</th>
+                <th>2G/3G/4G Data</th>
+                <th>Full Talktime</th>
+                <th>Roaming</th>
+              </tr>
+            </table>
+            <div class="mainplan">
+              <div class="each-plan">
+                <span class="money" id="money21" onclick="moneycopy(getElementById('money21').id)">Rs. 149</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD & Roaming calls on any network 2GB Data and 300 SMS. Pack valid for 28
+                  days.
+                </span>
+                <span class="description">
+                  Validity:28days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money22" onclick="moneycopy(getElementById('money22').id)">Rs. 249</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD calls on any network 1.5GB/day + FREE 500MB/day and 100 SMS/day. Pack
+                  valid for 28 days.
+                </span>
+                <span class="description">
+                  Validity:28days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money23" onclick="moneycopy(getElementById('money23').id)">Rs. 399</span>
+                <span class="description">
+                  Enjoy TRULY unlimited Local STD & Roaming calls on any network daily 1.5GB data and 100 SMS. Pack
+                  valid for 56 days
+                </span>
+                <span class="description">
+                  Validity:56days
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money24" onclick="moneycopy(getElementById('money24').id)">Rs. 48</span>
+                <span class="description">
+                  Enjoy 3GB data valid till your current pack validity
+                </span>
+                <span class="description">
+                  Validity:NA
+                </span>
+              </div>
+
+              <div class="each-plan">
+                <span class="money" id="money25" onclick="moneycopy(getElementById('money25').id)">Rs. 98</span>
+                <span class="description">
+                  Enjoy 12GB data valid till your current pack validity
+                </span>
+                <span class="description">
+                  Validity:NA
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--/MTNL Plan-->
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

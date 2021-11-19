@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/gas_style.css">
+      <script src="./javascript/gas.js"></script>
+    <title>Gas</title>
+</head>
+<body>
+
+     <!--Header-->
+  <header>
+    <div id="logo">Online <a class="logo-s">Recharge</a></div>
+    <span class="sign"><a href="#" class="act" onclick="document.getElementById('id01').style.display='block'">SIGN
+        UP</a></span>
+    <span class="sign"><a href="#" class="act" onclick="document.getElementById('id01').style.display='block'">SIGN
+        IN</a></span>
+  </header>
+  <!--/Header-->
+
+  <!--Login-->
+  <div id="id01" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="./image/user.jpg" alt="Avatar" class="avatar" />
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" class="inputcred" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" class="inputcred" required />
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>
+      </div>
+
+      <div class="container">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
+          Cancel
+        </button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("id01");
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+  <!--//Login-->
+
+
+  <!--Form-->
+<div class="main-gas">
+  
+  <div class="gas">
+
+  <div class="company-option">
+    <h2>Online Gas Booking</h2>
+    <div class="company">
+
+      <div class="box">
+        <a onclick="operator(getElementById('ind').id)">
+          <img src="./image/indane.jpg"  style="border-radius: 50px;">
+          <p id="ind">Indane Bill Payment</p>
+        </a>
+      </div>
+
+      <div class="box">
+        <a onclick="operator(getElementById('hpg').id)">
+          <img src="./image/hpgas.jpg"  style="border-radius: 50px;">
+          <p id="hpg">HP Gas Bill Payment</p>
+        </a>
+      </div>
+
+      <div class="box">
+        <a onclick="operator(getElementById('bha').id)">
+          <img src="./image/bharatgas.jpg"   style="border-radius: 50px;">
+          <p id="bha">BharatGas Bill Payment</p>
+        </a>
+      </div>
+     </div>
+   </div>
+
+   <div id="indaneandhp">
+      <div class="one">
+     <label for="operator">Operator</label>
+     <input type="text" name="operator" id="operator-name"  placeholder="Your Gas Provider"  autocomplete="off">
+     </div>
+
+      <div class="one">
+        <label for="contact">Registered Contact Number</label>
+        <input type="number" name="contact" id="contact-number"  placeholder="Registered Contact Number">
+      </div>
+
+      <div class="one">
+        <button type="button" class="btn1">Proceed to Recharge</button>
+      </div>
+
+    </div>
+
+
+
+
+   
+
+
+</div>
+
+</div>
+
+
+  
+
+    
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/flg_style.css">
+    <script src="https://kit.fontawesome.com/c7f4ed34f1.js" crossorigin="anonymous"></script><!--Font awesonme-->
+
+    <title>Document</title>
+</head>
+<body>
+   
+    <!--Header-->
+  <header>
+    <div id="logo">Online <a class="logo-s">Recharge</a></div>
+    <span class="sign"><a href="#" class="act" onclick="document.getElementById('id02').style.display='block'">SIGN
+        UP</a></span>
+    <span class="sign"><a href="#" class="act" onclick="document.getElementById('id01').style.display='block'">SIGN
+        IN</a></span>
+  </header>
+  <!--/Header-->
+
+  
+  <!--Login-->
+  <div id="id01" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="./image/user.jpg" alt="Avatar" class="avatar" />
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" class="inputcred" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" class="inputcred" required />
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>
+      </div>
+
+      <div class="container">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
+          Cancel
+        </button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+  <!--//Login-->
+
+  
+  <!--Sign up-->
+  <div id="id02" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="./image/user.jpg" alt="Avatar" class="avatar" />
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Enter Your Name</b></label>
+        <input type="text" placeholder="Enter Your Name" name="uname" class="inputcred" required />
+
+        <label for="uname"><b>Enter Your Email Id</b></label>
+        <input type="text" placeholder="Entee Your Email Id" name="uname" class="inputcred" required />
+
+        <label for="uname"><b>Enter Your Mobile Number</b></label>
+       <input type="text" placeholder="Enter Your Mobile Number" name="uname" class="inputcred" required />
+
+        <label for="uname"><b>Enter Password</b></label>
+        <input type="text" placeholder="Enter Password" name="uname" class="inputcred" required />
+
+        <label for="psw"><b>Confirm Password</b></label>
+        <input type="password" placeholder="Confirm Password" name="psw" class="inputcred" required />
+
+        <button type="submit">Sign Up</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>
+      </div>
+
+      <div class="container">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">
+          Cancel
+        </button>
+        <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+      </div>
+    </form>
+  </div>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id02');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+  <!--//Sign Up-->
+
+   <div class="f-ele">
+       <div class="f-form">
+           <p>Book Flight Tickets</p>
+           <form action="" id="flight">
+               
+            <div class="radio">
+                <input type="radio" name="one-way" id="oneway" onclick="trip1()">
+                <label for="oneway">One Way</label>
+
+                <input type="radio" name="one-way" id="twoway" onclick="trip2()">
+                <label for="twoway">Round Trip</label>
+
+            </div>
+
+            <div class="desti">
+                <select name="from" id="from">
+                    <option value="">From</option>
+                    <option value="delhi">Indira Gandhi Airport,Delhi</option>
+                    <option value="bengaluru">Kempegowda Airport ,Bengaluru</option>
+                    <option value="mumbai">Chhatrapati Shvaji Airport ,Mumbai</option>
+                    <option value="hyderabad">Rajiv Gandhi Airport ,Hyderabad</option>
+                    <option value="patna">Lok Nayak Jayaprakash Airport, patna</option>
+                    <option value="goa">Goa Airport ,Goa</option>
+                    <option value="darbhanga">Darbhanga Airport ,Darbhanga</option>
+                    <option value="lucknow">Chaudhary Charan Singh International Airport,Lucknow</option>
+                    <option value="amritsar">Sri Guru Ram Das Jee Airport ,Amritsar</option>
+                </select>
+                <i class="fas fa-exchange-alt"></i>
+                <select name="to" id="to">
+                    <option value="">To</option>
+                    <option value="delhi">Indira Gandhi Airport,Delhi</option>
+                    <option value="bengaluru">Kempegowda Airport ,Bengaluru</option>
+                    <option value="mumbai">Chhatrapati Shvaji Airport ,Mumbai</option>
+                    <option value="hyderabad">Rajiv Gandhi Airport ,Hyderabad</option>
+                    <option value="patna">Lok Nayak Jayaprakash Airport, patna</option>
+                    <option value="goa">Goa Airport ,Goa</option>
+                    <option value="darbhanga">Darbhanga Airport ,Darbhanga</option>
+                    <option value="lucknow">Chaudhary Charan Singh International Airport,Lucknow</option>
+                    <option value="amritsar">Sri Guru Ram Das Jee Airport ,Amritsar</option>
+                </select>
+            </div>
+             
+              <div id="depart">
+              <input type="date" name="depart">
+              <label for="depart">Departure Date</label>
+              </div>
+
+              <div id="depart">
+              <input type="date" name="depart" id="creturn" disabled>
+              <label for="depart">Return  Date</label>
+              </div>
+
+              <div id="travellers">
+              <input type="number" name="travellers" >
+              <label for="travellers">Enter Number of Travellers</label>
+            </div>
+
+              <select id="fclass">
+                  <option value="">Select Fligh Class</option>
+                  <option value="economy">Economy</option>
+                  <option value="premium">Premimum Economy</option>
+                  <option value="business">Business Class</option>
+            </select>
+
+              <button type="button" class="btn1" >Proceed to Recharge</button>
+
+           </form>
+       </div>
+
+   </div>
+
+   <script>
+     function trip1()
+    {
+    if(document.getElementById('oneway').checked)
+    {
+                 
+              // var x=document.getElementById('creturn');
+              // x.setAttribute("input","disabled")
+
+              document.getElementById('creturn').disabled=true;
+    }
+}
+
+
+    function trip2()
+    {
+    if(document.getElementById('twoway').checked)
+    {
+                 
+              var x=document.getElementById('creturn');
+              x.removeAttribute("disabled")
+    }
+}
+ </script>
+
+    
+</body>
+</html>

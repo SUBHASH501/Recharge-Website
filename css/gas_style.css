@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    /* background-color: #1830b9; */
+} 
+
+header{
+    height: 60px;
+    width:100%;
+    /* position: absolute; */
+    top:0;
+    /* z-index: 2; */
+    /* background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)); */
+    background: black;
+    position:sticky;
+
+}
+
+#logo{
+    line-height: 60px;
+    margin-left: 40px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+#logo:hover{
+    color: #ecf0f1;
+}
+#logo-s{
+    color: #ecf0f1;
+    margin-left: 5px;
+}
+
+#logo:hover #logo-s{
+    color:#3498db;
+}
+
+.sign{
+    float:right;
+    line-height: 60px;
+    margin-right: 40px;
+}
+
+.sign a{
+    color:#fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.act{
+    border: 2px solid #fff;
+    border-radius: 50px;
+    padding:6px 15px;
+}
+
+.sign a:hover{
+    color:#3498db;
+}
+
+.main-gas{
+    background-color:rgb(233, 162, 30);
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+
+}
+
+
+.gas{
+    background-color:#002447 ;
+    /* display: flex; */
+    /* padding-top: 20px; */
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+
+
+
+.company-option{
+    /* background-color: #002447; */
+    /* margin: 30px; */
+    box-sizing: border-box;
+    
+}
+
+.company-option h2{
+    text-align: center;
+    /* margin-top: 20px; */
+    padding: 10px;
+    color: white;
+    margin: auto;
+}
+.company{
+    display: flex;
+    margin: 20px;
+    /* height: 200px; */
+}
+
+.box{
+    padding: 20px;
+    cursor: pointer;
+    margin:auto;
+}
+
+.box a{
+    color: black;
+    text-decoration: none;
+}
+
+.box img{
+    margin-left: 20px;
+}
+
+.box p{
+    color:white;
+    text-align: center;
+}
+
+input[type="text"],[type="number"]{
+    width:80%;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#indaneandhp{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+.one{
+    margin: auto;
+}
+
+.btn1{
+    width:150px;
+    background-color: #3498db;
+    border-radius: 5px;
+    text-transform: capitalize;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
